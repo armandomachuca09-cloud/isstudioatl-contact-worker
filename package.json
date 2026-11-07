@@ -1,0 +1,32 @@
+{
+  "name": "isstudioatl-contact-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for isstudioatl.com contact form submissions with D1 database",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "db:migrate:local": "wrangler d1 execute isstudioatl-contact-db --local --file=./schema.sql",
+    "db:migrate:remote": "wrangler d1 execute isstudioatl-contact-db --remote --file=./schema.sql"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "d1",
+    "typescript",
+    "hono",
+    "serverless"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hono": "^4.7.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250224.0",
+    "typescript": "^5.7.3",
+    "wrangler": "^3.111.0"
+  }
+}
+

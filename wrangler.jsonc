@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "isstudioatl-contact",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-04",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "isstudioatl-contact-db",
+      "database_id": "a1aa13d8-8f21-4fae-8899-71c89141d529"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
