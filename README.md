@@ -20,10 +20,14 @@
 isstudioatl-contact-worker/
 ├── src/
 │   └── index.ts          # Lógica del worker, validaciones, CORS y persistencia D1
+├── test/
+│   └── index.spec.ts     # Pruebas unitarias de endpoints con Vitest
 ├── schema.sql            # Definición de la tabla contacts e índices en D1
 ├── wrangler.jsonc        # Configuración del Worker y bindings de D1
 ├── package.json          # Dependencias y scripts de desarrollo
 ├── tsconfig.json         # Configuración de TypeScript para Cloudflare Workers
+├── eslint.config.js      # Configuración de ESLint (Flat Config)
+├── vitest.config.ts      # Configuración de Vitest para pruebas
 └── README.md             # Guía de uso y comandos
 ```
 
@@ -34,7 +38,16 @@ isstudioatl-contact-worker/
 ### 1. Instalación de dependencias
 
 ```bash
-npm install
+pnpm install
+```
+
+### 2. Scripts de Validación y Calidad de Código
+
+```bash
+pnpm typecheck     # Verificación estricta de tipos con TypeScript (noEmit)
+pnpm lint          # Análisis estático de código con ESLint
+pnpm test          # Ejecución de pruebas unitarias con Vitest
+pnpm build         # Verificación de compilación y empaquetado del Worker sin desplegar
 ```
 
 ### 2. Configurar la Base de Datos D1
